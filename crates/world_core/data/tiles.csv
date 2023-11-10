@@ -1,0 +1,10 @@
+id,name,colour
+0,_empty,white
+1,plains,light_green
+2,sea,blue
+3,forest,dark_green
+4,mountain,yellow
+5,road,light_grey
+6,city,dark_gray
+7,factory,faction
+8,headquarters,faction
