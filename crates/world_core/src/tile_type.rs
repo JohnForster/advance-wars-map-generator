@@ -1,4 +1,4 @@
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Copy, Clone, PartialEq, Eq)]
 pub enum Player {
     One,
     Two,
@@ -6,7 +6,7 @@ pub enum Player {
     _Four,
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, PartialEq, Eq, Copy)]
 pub enum TileType {
     Plains,
     Sea,
@@ -58,6 +58,13 @@ impl TileType {
             TileType::Factory(_) => 7,
             TileType::Hq(_) => 8,
             _ => panic!("No id for tile {:?}", self),
+        }
+    }
+
+    pub fn is_empty(&self) -> bool {
+        match self {
+            TileType::Empty => true,
+            _ => false,
         }
     }
 }
